@@ -9,34 +9,41 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class MathController {
 
-//This controller should listen for requests for several routes that correspond
+//This controller should listen for requests for several routes that correspo----
 
 
-
-    @Controller
-    public class HelloController {
-        @RequestMapping(path = "add/{numOne}/and/{numTwo}")
-        @ResponseBody
-        public Integer addNum(@PathVariable int numOne, @PathVariable int numTwo) {
-            return numOne + numTwo;
-        }
-
-
-    @GetMapping("subtract/{numOne}/from/{numTwo}");
+    @GetMapping("/add/{num1}/and/{num2}")
     @ResponseBody
-    public String subtractNums(@PathVariable int numOne, @PathVariable int numTwo) {
-        return "Hey User, heres the difference between" +numOne + " & " + numTwo + ".  " + (numTwo - numTwo);
+
+    public String addNums(@PathVariable int num1, @PathVariable int num2){
+        return "Hey, user! You wanted to add " + num1 + " and " + num2 + " together, here's the sum: " + (num1 + num2);
     }
 
-    @GetMapping("multiply/{numOne}/and/{numTwo}");
+
+
+
+    @GetMapping("/subtract/{num1}/from/{num2}")
     @ResponseBody
-    public String multiplyNums(@PathVariable int numOne, @PathVariable int numTwo) {
-        return "Hey User, heres the total of " +numOne + " & " + numTwo + ".  " + (numTwo * numTwo);
+
+    public String subtractNums(@PathVariable int num1, @PathVariable int num2){
+        return "Hey, user! You wanted to subtract " + num1 + " from " + num2 + ", here's the difference: " + (num2 - num1);
     }
 
-    @GetMapping("divide/{numOne}/by/{numTwo}");
+
+    @GetMapping("/multiply/{num1}/and/{num2}")
     @ResponseBody
-    public String divideNums(@PathVariable int numOne, @PathVariable int numTwo) {
-        return "Hey User, heres the dividend of" +numOne + " & " + numTwo + ".  :" + ((double)numTwo / (double) numTwo);
+
+    public String multiplyNums(@PathVariable int num1, @PathVariable int num2){
+        return "Hey, user! You wanted to multiply " + num1 + " and " + num2 + ", here's the product: " + (num1 * num2);
     }
+
+    @GetMapping("/divide/{num1}/by/{num2}")
+    @ResponseBody
+
+    public String divideNums(@PathVariable int num1, @PathVariable int num2){
+        return "Hey, user! You wanted to divide " + num1 + " by " + num2 + ", here's the quotient: " + ((double) num1 /(double) num2);
+    }
+
+
 }
+
