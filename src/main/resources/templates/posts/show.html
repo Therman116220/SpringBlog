@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Individual Post</title>
+</head>
+<body>
+<div>
+    <h1 th:text ="${singlePost.title}"></h1>
+    <p th:text="${singlePost.description}"></p>
+    <a th:href="@{'/post/{id}/edit'(id=${singlePost.id})}">go to edit this post</a>
+    <a th:href="@{'/post/{id}'(id= ${singlePost.id})}">go to this post</a>
+
+</div>
+</body>
+</html>

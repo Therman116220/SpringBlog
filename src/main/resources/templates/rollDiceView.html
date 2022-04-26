@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rolling Dice</title>
+</head>
+<body>
+path var = <span th:text="${guessNumber}"></span>
+
+
+<h1 style="align-content: center">Pick a number to guess 1-5? </h1>
+<br>
+<div style="text-decoration: none; color: #0e6fee">
+<a  href="/roll-dice/1">Choose number 1</a><br>
+<a href="/roll-dice/2">Choose number 2</a><br>
+<a href="/roll-dice/3">Choose number 3</a><br>
+<a href="/roll-dice/4">Choose number 4</a><br>
+<a href="/roll-dice/5">Choose number 5</a><br>
+<a href="/roll-dice/6">Choose number 6</a><br>
+</div>
+<p>The results are in... Your guess was  <span th:text="${guessNumber}"></span>  The drawn numbers are <span th:text="${actualNumber}"></span> .</p>
+
+
+
+
+
+
+</body>
+</html>

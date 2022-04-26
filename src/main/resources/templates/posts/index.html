@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"  >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+</head>
+<body>
+
+
+<div th:each="post : ${posts}">
+    <p th:text="${post.id}"></p>
+    <p th:text="${post.title}" ></p>
+    <p th:text="${post.description}"></p>
+    <a th:href="@{'/post/{id}'(id= ${post.id})}">Go To</a>
+
+</div>
+<h2><a href="/post/create">add post ?!</a></h2>
+
+</body>
+</html>
