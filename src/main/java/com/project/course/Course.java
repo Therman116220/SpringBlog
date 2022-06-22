@@ -10,15 +10,13 @@ import javax.persistence.Id;
 public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private final long id;
+    private final Long id;
     private String title;
     private String url;
 
-    protected Course(long id) {
-
-        this.id = id;
+    protected Course() {
+    id = null;
     }
-
 
 
     public Course(String title, String url) {
