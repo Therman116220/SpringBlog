@@ -11,10 +11,12 @@ public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private final long id;
- private String title;
+    private String title;
+    private String url;
 
-    public String getTitle() {
-        return title;
+    protected Course(long id) {
+
+        this.id = id;
     }
 
 
@@ -25,12 +27,13 @@ public class Course {
         this.url = url;
     }
 
+
+    public String getTitle() {
+        return title;
+    }
     public void setTitle(String title) {
         this.title = title;
     }
-
-
-
 
     public String getUrl() {
         return url;
@@ -40,12 +43,8 @@ public class Course {
         this.url = url;
     }
 
-    private String url;
 
- protected Course(long id) {
 
-     this.id = id;
- }
 
 
 
