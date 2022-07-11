@@ -14,6 +14,8 @@ public class Course {
     private String title;
     private String url;
 
+
+    /*JPA(Java Persistance API) --Requires a Constructor W/O parameters || Try "Protected"   , In-package access*/
     protected Course() {
     id = null;
     }
