@@ -1,8 +1,6 @@
 package com.project.review;
 
 
-import com.project.course.Course;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,7 +20,11 @@ public class Review {
     private int rating;
     private String description;
 
-
+    public Review(Long id, int rating, String description) {
+        this.id = id;
+        this.rating = rating;
+        this.description = description;
+    }
 
     /*Get-Set*/
     public int getRating() {
@@ -41,17 +43,7 @@ public class Review {
         this.description = description;
     }
 
-    /*------*/
 
-    /*JPA  --Java Persistance API*//*
-    protected Review() {
-
-    }*/
-
-    public Review(int rating, String description) {
-        this.rating = rating;
-        this.description = description;
-    }
 }
 
 
